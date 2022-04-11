@@ -1,0 +1,126 @@
+form {
+    overflow-y: scroll !important;
+}
+.form__group p{
+    position: absolute;
+    width: 340px;
+    text-align: right;
+    color: red;
+    font-size: 13px;
+}
+
+
+.content h3{
+    font-size: 34px;
+}
+.content p{
+    font-size: 17px;
+    margin: 25px 0px;
+}
+.content a{
+    color: #73bdab;
+    font-size: 17px;
+    margin-right: 15px;
+}
+
+.content{
+    text-align: left;
+    color: #fff;
+    margin-left: 80px;
+    margin-top: 105px;
+}
+
+.steps{
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+
+form{
+    width: 450px; height: 100%;
+    background: #fff;
+    z-index: 1;
+    margin: 0 auto;
+    margin-top: 0px;
+    top: 0;
+    padding: 35px 50px;
+    position: fixed;
+    right: 0;
+}
+.bgmask{
+    background: linear-gradient(rgba(0,0,0,.0) 50%, rgba(0,0,0,1));
+    height: 100%; width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+form h2{
+    font-size: 25px;
+}
+form label{
+    color: #000;
+    font-size: 17px;
+    font-weight: 100;
+    display: block;
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+form input{
+    width: 100%;
+    height: 37px;
+    background: rgba(196,196,196,.2);
+    padding-left: 10px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 4px;
+    transition: .2s ease;
+}
+form input:focus{
+    border: 1px solid rgba(146,228,208, .7);
+}
+
+form input[type="submit"]{
+    background: rgba(117,240,211,.4);
+    border: 1px solid rgba(57,241,197,.4);
+    height: 40px;
+    font-size: 16px;
+    margin-top: 25px;
+}
+form input[type="submit"]:hover{
+    background: rgba(110,231,202,.4);
+}
+form input[type="submit"]:active{
+    background: rgba(117,240,211,.8);
+    border: 1px solid rgba(117,240,211,0);
+}
+form a{
+
+}
+
+.links{
+    margin-top: 13px;
+}
+.links a{
+    color: #000;
+    display: block;
+    margin-left: 10px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+.links a:hover{
+    text-decoration: none;
+}
+.links a:before{
+    content: "";
+    background: #B0F9E8;
+    height: 18px; width: 4px;
+    position: absolute;
+    border-radius: 14px;
+    left: -10px; margin-top: 2px;
+    transition: .4s ease;
+    z-index: -1;
+}
+.links a:hover:before{
+    width: 120px;
+}
