@@ -16,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 })->name('homepage');
 
+Route::post('/logout',[\App\Http\Controllers\Auth\LogoutController::class,'perform'])->name('logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')->middleware('auth')->group(function (){
@@ -35,10 +36,6 @@ Route::prefix('admin')->middleware('auth')->group(function (){
         Route::get('/users',function (){
             return view('admin.editing.users');
         })->name('table-users');
-
-        Route::resources([
-            'offers' => \App\Http\Controllers\OfferController::class,
-        ]);
 
         Route::get('/userlist',function (){
             return view('admin.users.userslist');

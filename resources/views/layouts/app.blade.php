@@ -326,9 +326,9 @@
             <li><a href="{{route('admin-userlist')}}" class=" waves-effect waves-block"><i class="zmdi zmdi-account"></i><span>Пользователи</span></a></li>
 
 
-            <form action="{{route('logout')}}" method="POST">
+            <form action="{{route('logout')}}" method="POST" class="waves-effect waves-block">
                 @csrf
-                <li><a href="{{route('logout')}}" type="button" class="waves-effect waves-block"><i class="zmdi zmdi-minus-circle"></i><span>Выход</span></a></li>
+                <button type="submit" class="btn-neutral"><i class="zmdi zmdi-minus-circle"></i><span>Выход</span></button>
             </form>
 
 

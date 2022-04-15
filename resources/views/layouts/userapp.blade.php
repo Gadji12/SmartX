@@ -260,14 +260,10 @@
             <li><a href="{{route('user-portfolio')}}"><i class="zmdi zmdi-file"></i><span>Мои инвестиции</span></a></li>
             <li><a href="{{route('user-referals')}}"><i class="zmdi zmdi-accounts"></i><span>Рефералы</span></a></li>
             <li><a href="{{route('user-financial')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Финансы</span></a></li>
-            </li>
-
             <form action="{{route('logout')}}" method="POST">
                 @csrf
-                @method('POST')
-                <li><a href="{{route('logout')}}" type="button" class="waves-effect waves-block"><i class="zmdi zmdi-minus-circle"></i><span>Выход</span></a></li>
+                <button type="submit" class="btn-neutral"><i class="zmdi zmdi-minus-circle"></i><span>Выход</span></button>
             </form>
-
 
         </ul>
     </div>
