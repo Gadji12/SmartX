@@ -16,6 +16,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7868e52ddd.js" crossorigin="anonymous"></script>
+
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('admin/plugins/bootstrap/css/bootstrap.min.css')}}">
@@ -46,35 +48,30 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <link href="{{asset('admin/plugins/select2/select2.css')}}" rel="stylesheet" />
-{{--    <script src="{{asset('select')}}"></script>--}}
-</head>
 
+{{--    <link href="{{asset('profile/css/style.css')}}" rel="stylesheet" />--}}
+
+    {{--    <script src="{{asset('select')}}"></script>--}}
+</head>
+<style>
+
+</style>
 <body class="theme-blush">
 
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
         <div class="m-t-30"><img class="zmdi-hc-spin" src="{{asset('admin/images/loader.svg')}}" width="48" height="48" alt="Aero"></div>
-        <p>Загрузка страницы...</p>
+        <strong>Загрузка страницы...</strong>
     </div>
 </div>
 
 <!-- Overlay For Sidebars -->
 <div class="overlay"></div>
 
-<!-- Main Search -->
-<div id="search">
-    <button id="close" type="button" class="close btn btn-primary btn-icon btn-icon-mini btn-round">x</button>
-    <form>
-        <input type="search" value="" placeholder="Search..." />
-        <button type="submit" class="btn btn-primary">Search</button>
-    </form>
-</div>
-
 <!-- Right Icon menu Sidebar -->
 <div class="navbar-right">
     <ul class="navbar-nav">
-        <li><a href="#search" class="main_search" title="Search..."><i class="zmdi zmdi-search"></i></a></li>
         <li class="dropdown">
             <a href="javascript:void(0);" class="dropdown-toggle" title="App" data-toggle="dropdown" role="button"><i class="zmdi zmdi-apps"></i></a>
             <ul class="dropdown-menu slideUp2">
@@ -197,84 +194,36 @@
                 <li class="footer"> <a href="javascript:void(0);">View All Notifications</a> </li>
             </ul>
         </li>
+
+
         <li class="dropdown">
-            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
-                <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
-            </a>
+            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-balance-wallet"></i></a>
+
             <ul class="dropdown-menu slideUp2">
-                <li class="header">Tasks List <small class="float-right"><a href="javascript:void(0);">View All</a></small></li>
+                <li class="header">Ваш баланс <small class="float-right">
+                        <a href="javascript:void(0);">Подробнее</a></small>
+                </li>
+
                 <li class="body">
                     <ul class="menu tasks list-unstyled">
                         <li>
                             <div class="progress-container progress-primary">
-                                <span class="progress-badge">eCommerce Website</span>
+                                <span class="progress-badge">Готовы к выводу</span>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
                                         <span class="progress-value">86%</span>
                                     </div>
                                 </div>
-                                <ul class="list-unstyled team-info">
-                                    <li class="m-r-15"><small>Team</small></li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar2.jpg" alt="Avatar">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar3.jpg" alt="Avatar">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar4.jpg" alt="Avatar">
-                                    </li>
-                                </ul>
                             </div>
                         </li>
                         <li>
-                            <div class="progress-container">
-                                <span class="progress-badge">iOS Game Dev</span>
+                            <div class="progress-container progress-primary">
+                                <span class="progress-badge">Холд</span>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
                                         <span class="progress-value">45%</span>
                                     </div>
                                 </div>
-                                <ul class="list-unstyled team-info">
-                                    <li class="m-r-15"><small>Team</small></li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar10.jpg" alt="Avatar">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar9.jpg" alt="Avatar">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar8.jpg" alt="Avatar">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar7.jpg" alt="Avatar">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar6.jpg" alt="Avatar">
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="progress-container progress-warning">
-                                <span class="progress-badge">Home Development</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" style="width: 29%;">
-                                        <span class="progress-value">29%</span>
-                                    </div>
-                                </div>
-                                <ul class="list-unstyled team-info">
-                                    <li class="m-r-15"><small>Team</small></li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar5.jpg" alt="Avatar">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar2.jpg" alt="Avatar">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/xs/avatar7.jpg" alt="Avatar">
-                                    </li>
-                                </ul>
                             </div>
                         </li>
                     </ul>
@@ -299,57 +248,27 @@
         <ul class="list">
             <li>
                 <div class="user-info">
-                    <a class="image" href="profile.html"><img src="assets/images/profile_av.jpg" alt="User"></a>
+                    <a class="image" href="profile.html"><img src="{{asset('admin/images/profile_av.jpg')}}" alt="user"></a>
                     <div class="detail">
                         <h4>{{Auth::user()->name}}</h4>
-                        <small>Администратор</small>
+                        <small>Пользователь</small>
                     </div>
                 </div>
+            <li><a href="{{route('user-profile')}}"><i class="zmdi zmdi-account"></i><span>Мой профиль</span></a></li>
+            <li><a href="{{route('user-dashboard')}}"><i class="zmdi zmdi-home"></i><span>Главная</span></a></li>
+            <li><a href="{{route('product.index')}}"><i class="zmdi zmdi-shopping-cart"></i><span>Продукты</span></a></li>
+            <li><a href="{{route('user-portfolio')}}"><i class="zmdi zmdi-file"></i><span>Мои инвестиции</span></a></li>
+            <li><a href="{{route('user-referals')}}"><i class="zmdi zmdi-accounts"></i><span>Рефералы</span></a></li>
+            <li><a href="{{route('user-financial')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Финансы</span></a></li>
             </li>
-            <li class="active open"><a href="{{route('admin_dashboard')}}"><i class="zmdi zmdi-home"></i><span>Главная</span></a></li>
-
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-shopping-cart"></i><span>Проекты</span></a>
-                <ul class="ml-menu">
-                    <li><a href="{{route('offers.create')}}">Добавить проект</a></li>
-                    <li><a href="{{route('offers.index')}}">Управление проектами</a></li>
-                    <li><a href="events.html">Неактивные проекты</a></li>
-                </ul>
-            </li>
-
-            <li class="open_top"><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Редактирование</span></a>
-                <ul class="ml-menu">
-                    <li><a href="{{route('conversions')}}">Доли</a></li>
-                    <li><a href="{{route('table-users')}}">Пользователи</a></li>
-                </ul>
-            </li>
-
-            <li><a href="{{route('admin-userlist')}}" class=" waves-effect waves-block"><i class="zmdi zmdi-account"></i><span>Пользователи</span></a></li>
-
 
             <form action="{{route('logout')}}" method="POST">
                 @csrf
+                @method('POST')
                 <li><a href="{{route('logout')}}" type="button" class="waves-effect waves-block"><i class="zmdi zmdi-minus-circle"></i><span>Выход</span></a></li>
             </form>
 
 
-            <li>
-                <div class="progress-container progress-primary m-t-10">
-                    <span class="progress-badge">CTR</span>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 67%;">
-                            <span class="progress-value">67%</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="progress-container progress-info">
-                    <span class="progress-badge">Принято лидов</span>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%;">
-                            <span class="progress-value">86%</span>
-                        </div>
-                    </div>
-                </div>
-            </li>
         </ul>
     </div>
 </aside>
@@ -504,38 +423,38 @@
 <!-- Main Content -->
 
 <section class="content">
- @yield('content')
+    @yield('user-content')
 </section>
-    <script src="{{asset('admin/bundles/libscripts.bundle.js')}}"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
-    <script src="{{asset('admin/bundles/vendorscripts.bundle.js')}}"></script> <!-- slimscroll, waves Scripts Plugin Js -->
+<script src="{{asset('admin/bundles/libscripts.bundle.js')}}"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
+<script src="{{asset('admin/bundles/vendorscripts.bundle.js')}}"></script> <!-- slimscroll, waves Scripts Plugin Js -->
 
-    <script src="{{asset('admin/bundles/jvectormap.bundle.js')}}"></script> <!-- JVectorMap Plugin Js -->
-    <script src="{{asset('admin/bundles/sparkline.bundle.js')}}"></script> <!-- Sparkline Plugin Js -->
-    <script src="{{asset('admin/bundles/c3.bundle.js')}}"></script>
+<script src="{{asset('admin/bundles/jvectormap.bundle.js')}}"></script> <!-- JVectorMap Plugin Js -->
+<script src="{{asset('admin/bundles/sparkline.bundle.js')}}"></script> <!-- Sparkline Plugin Js -->
+<script src="{{asset('admin/bundles/c3.bundle.js')}}"></script>
 
-    <script src="{{asset('admin/bundles/mainscripts.bundle.js')}}"></script>
-    <script src="{{asset('admin/js/pages/index.js')}}"></script>
+<script src="{{asset('admin/bundles/mainscripts.bundle.js')}}"></script>
+<script src="{{asset('admin/js/pages/index.js')}}"></script>
 
-    <script src="{{asset('admin/plugins/dropify/js/dropify.min.js')}}"></script>
-    <script src="{{asset('admin/js/pages/forms/dropify.js')}}"></script>
+<script src="{{asset('admin/plugins/dropify/js/dropify.min.js')}}"></script>
+<script src="{{asset('admin/js/pages/forms/dropify.js')}}"></script>
 
-    <script src="{{asset('admin/plugins/jquery-inputmask/jquery.inputmask.bundle.js')}}"></script> <!-- Input Mask Plugin Js -->
-    <script src="{{asset('admin/plugins/multi-select/js/jquery.multi-select.js')}}"></script> <!-- Multi Select Plugin Js -->
-    <script src="{{asset('admin/plugins/jquery-spinner/js/jquery.spinner.js')}}"></script> <!-- Jquery Spinner Plugin Js -->
-    <script src="{{asset('admin/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js')}}"></script> <!-- Bootstrap Tags Input Plugin Js -->
-    <script src="{{asset('admin/plugins/nouislider/nouislider.js')}}"></script> <!-- noUISlider Plugin Js -->
+<script src="{{asset('admin/plugins/jquery-inputmask/jquery.inputmask.bundle.js')}}"></script> <!-- Input Mask Plugin Js -->
+<script src="{{asset('admin/plugins/multi-select/js/jquery.multi-select.js')}}"></script> <!-- Multi Select Plugin Js -->
+<script src="{{asset('admin/plugins/jquery-spinner/js/jquery.spinner.js')}}"></script> <!-- Jquery Spinner Plugin Js -->
+<script src="{{asset('admin/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js')}}"></script> <!-- Bootstrap Tags Input Plugin Js -->
+<script src="{{asset('admin/plugins/nouislider/nouislider.js')}}"></script> <!-- noUISlider Plugin Js -->
 
-    <script src="{{asset('admin/bundles/datatablescripts.bundle.js')}}"></script>
-    <script src="{{asset('admin/plugins/jquery-datatable/buttons/dataTables.buttons.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.colVis.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.flash.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.html5.min.js')}}"></script>
-    <script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
+<script src="{{asset('admin/bundles/datatablescripts.bundle.js')}}"></script>
+<script src="{{asset('admin/plugins/jquery-datatable/buttons/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.bootstrap4.min.js')}}"></script>
+<script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.colVis.min.js')}}"></script>
+<script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.flash.min.js')}}"></script>
+<script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.html5.min.js')}}"></script>
+<script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
 
-    <script src="{{asset('admin/plugins/select2/select2.min.js')}}"></script> <!-- Select2 Js -->
-    <script src="{{asset('admin/js/pages/forms/advanced-form-elements.js')}}"></script>
-    <script src="{{asset('admin/js/pages/tables/jquery-datatable.js')}}"></script>
+<script src="{{asset('admin/plugins/select2/select2.min.js')}}"></script> <!-- Select2 Js -->
+<script src="{{asset('admin/js/pages/forms/advanced-form-elements.js')}}"></script>
+<script src="{{asset('admin/js/pages/tables/jquery-datatable.js')}}"></script>
 
 </body>
 </html>

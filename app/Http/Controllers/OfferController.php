@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Offer;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+//use Intervention\Image;
+use Illuminate\Support\Facades\Storage;
+use Image;
 
 class OfferController extends Controller
 {
@@ -15,7 +18,7 @@ class OfferController extends Controller
      */
     public function index()
     {
-        return view('offer/index',[
+        return view('admin.offer.index',[
             'offers'=>  Offer::all()
 
             ]);
@@ -28,7 +31,7 @@ class OfferController extends Controller
      */
     public function create()
     {
-        return view('offer/create');
+        return view('admin.offer.create');
     }
 
     /**
@@ -41,13 +44,16 @@ class OfferController extends Controller
     {
         $offer = new Offer();
         $offer -> offer_name = $request->input('offer_name');
-                    $offer -> desc_offer = $request->input('desc_offer');
+        $offer -> desc_offer = $request->input('desc_offer');
         $offer -> price_per_offer = $request->input('price_per_offer');
         $offer -> number_shares_offer = $request->input('number_shares_offer');
         $offer -> end_date_offer = $request->input('end_date_offer');
 
         if ($request->hasFile('picture_offer')){
             $offer -> picture_offer = $request ->file('picture_offer')->store('picture_offer','public');
+
+
+//            \Intervention\Image\Facades\Image::make('picture_offer')->resize(300,300)->save(public_path('picture_offer/'));
         }
         $offer->save();
         return redirect()->route('offers.index')->with('alert','Оффер успешно создан');
@@ -62,7 +68,7 @@ class OfferController extends Controller
     public function show(Offer $offer)
     {
 //        dd($offer);
-        return view('offer.show', compact('offer'));
+        return view('admin.offer.show', compact('offer'));
     }
 
     /**
@@ -81,11 +87,26 @@ class OfferController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Offer  $offer
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse|\Illuminate\Http\Response
      */
     public function update(Request $request, Offer $offer)
     {
-        //
+        $old_picture = null;
+        $offer = $request->all();
+        if ($request->hasFile('picture_offer'))
+        {
+            $offer -> picture_offer = $request ->file('picture_offer')->store('picture_offer','public');
+        }
+
+
+        $old_picture = $offer->picture_offer;
+
+
+        if ($offer->picture_offer){
+            Storage::delete("storage/'. $offer->picture_offer");
+        }
+
+        return redirect('')->route('offers.index')->with('Успешно обновлено');
     }
 
     /**
@@ -96,6 +117,9 @@ class OfferController extends Controller
      */
     public function destroy(Offer $offer)
     {
+        if ($offer->picture_offer){
+            Storage::delete("storage/'. $offer->picture_offer");
+        }
         $offer->delete();
         return redirect()->route('offers.index');
     }

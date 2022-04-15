@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "dropify": "^0.2.2",
-        "inputmask": "^5.0.7"
+        "inputmask": "^5.0.7",
+        "select2": "~4.0"
     }
 }
