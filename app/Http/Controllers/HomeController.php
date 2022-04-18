@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
+use Spatie\Permission\Traits\HasRoles;
+
 
 class HomeController extends Controller
 {
+    use HasRoles;
     /**
      * Create a new controller instance.
      *
@@ -23,6 +27,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return redirect()->route('homepage');
+        $user = Auth::user();
+
+        if ($user->hasRole('admin')){
+         return redirect()->route('admin_dashboard');
+        }
+
+        if ($user->hasRole('user')){
+            return redirect()->route('user-dashboard');
+        }
     }
 }
