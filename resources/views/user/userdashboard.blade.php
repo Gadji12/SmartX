@@ -29,6 +29,7 @@
                 <div class="card widget_2 traffic">
                     <div class="body">
                         <h6>Финансовый счёт</h6>
+                        <a href="" class="btn btn-primary mt-2 mb-2">Пополнить баланс</a>
                         <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                         <small>Общая сумма на Вашем счете</small>
                     </div>
@@ -38,7 +39,9 @@
                 <div class="card widget_2 sales">
                     <div class="body">
                         <h6>Активные инвестиции</h6>
-                        <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
+                        <a href="{{route('products.index')}}" class="btn btn-primary mt-2 mb-3">Инвестировать</a>
+                        <h2><span style="color:green;">0<span style="font-size:18px;">₽</span></span></h2>
+                        <a href="{{route('user-project')}}" class="btn btn-primary mt-2 mb-2">Мои проекты</a><br>
                         <small>Актуальная сумма, которая инвестирована в проекты</small>
                     </div>
                 </div>
@@ -65,6 +68,7 @@
                 <div class="card widget_2 sales">
                     <div class="body">
                         <h6>Всего выведено</h6>
+                        <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3">Вывести деньги</a>
                         <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                         <small>Общая сумма выведенных Вами средств</small>
                     </div>
@@ -74,6 +78,7 @@
                 <div class="card widget_2 sales">
                     <div class="body">
                         <h6>Общая прибыль</h6>
+                        <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3">Переводы</a>
                         <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                         <small>Доход в совокупности, полученный от инвестиций и с партнёрской программы за весь период</small>
                     </div>

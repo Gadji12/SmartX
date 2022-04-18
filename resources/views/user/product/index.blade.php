@@ -9,6 +9,7 @@
                         <li class="breadcrumb-item"><a href="main"><i class="zmdi zmdi-home"></i> Smart X-Investment</a></li>
                         <li class="breadcrumb-item active">Список проектов</li>
                     </ul>
+                    <a href="{{route('products.create')}}" class="btn btn-primary text-white mt-2" type="button">Создать продукт</a>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
@@ -19,20 +20,20 @@
         <div class="container-fluid">
             <div class="col-lg-12">
                 <div class="row clearfix d-flex">
-                    @foreach($offers as $offer)
+                    @foreach($products as $product)
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="card">
                             <div class="body product_item">
-                                <img src="{{asset('/storage/'.$offer->picture_offer)}}" alt="Product" class="img-fluid cp_img">
+                                <img src="{{asset('/storage/'.$product->user_picture_offer)}}" alt="Product" class="img-fluid cp_img">
                                 <div class="product_details">
-                                    <a href="ec-product-detail.html">{{$offer->offer_name}}</a>
+                                    <a href="ec-product-detail.html">{{$product->user_offer_name}}</a>
                                     <ul class="product_price list-unstyled">
-                                        <li class="new_price">{{$offer->end_date_offer}}</li>
+                                        <li class="new_price">{{$product->user_end_date_offer}}</li>
                                         <li class="new_price">25%</li>
                                     </ul>
                                 </div>
                                 <div class="action">
-                                    <a href="{{route('product.show',$offer)}}" class="btn btn-primary waves-effect">Подробнее</a>
+                                    <a href="{{route('products.show',$product)}}" class="btn btn-primary waves-effect">Подробнее</a>
                                 </div>
                             </div>
                         </div>

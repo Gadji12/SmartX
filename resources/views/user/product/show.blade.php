@@ -7,7 +7,7 @@
                     <h2>Подробности проекта</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="main"><i class="zmdi zmdi-home"></i> Smart X-Investment</a></li>
-                        <li class="breadcrumb-item"><a href="offers">Список проектов</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('products.index')}}">Список проектов</a></li>
                         <li class="breadcrumb-item active">Подробности проекта</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
@@ -26,7 +26,7 @@
                                 <div class="col-xl-3 col-lg-4 col-md-12">
                                     <div class="preview preview-pic tab-content">
                                         <div class="tab-pane active" id="product_1">
-                                            <img src="{{asset('/storage/'.$offer->picture_offer)}}" class="img-fluid" alt="">
+                                            <img src="{{asset('/storage/'.$product->user_picture_offer)}}" class="img-fluid" alt="">
                                         </div>
                                     </div>
                                 </div>

@@ -31,7 +31,7 @@
                         </div><br>
                         <div class="row">
                             <div class="col-12 text-center">
-                                <button class="btn btn-warning"  id="withbtn" onclick="withdraw('#withbtn');">Вывести деньги</button>
+                                <a href="{{route('user-withdrawal')}}" class="btn btn-warning"  id="withbtn" onclick="withdraw('#withbtn');">Вывести деньги</a>
                                 <p style="margin-top: 10px;margin-bottom: 0px;">Минимальная сумма вывода: 300₽</p>
                             </div>
                         </div>

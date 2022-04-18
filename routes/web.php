@@ -69,11 +69,23 @@ Route::prefix('user')->middleware('auth')->group(function (){
         })->name('user-referals');
 
         Route::get('/financial',function (){
-            return view('user.financial');
+            return view('user.financial.financial');
         })->name('user-financial');
 
+        Route::get('/financial/withdrawal',function (){
+            return view('user.financial.withdrawal');
+        })->name('user-withdrawal');
+
+        Route::get('/translation',function (){
+            return view('user.financial.translation');
+        })->name('user-translation');
+
+        Route::get('/project',function (){
+            return view('user.myproject');
+        })->name('user-project');
+
         Route::resources([
-            'product' =>\App\Http\Controllers\UserProductController::class
+            'products' =>\App\Http\Controllers\UserProductController::class
         ]);
     });
 });

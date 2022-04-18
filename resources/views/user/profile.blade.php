@@ -27,8 +27,8 @@
                             <div class="row">
                                 <div class="col-12 mb-4">
                                     <p class="text-muted">{{Auth::user()->email}} </p>
-                                    <a href="https://themeforest.net/user/wrraptheme/portfolio" class="btn btn-light">Документы</a>
-                                    <a href="https://thememakker.com/" class="btn btn-warning">Настройки профиля</a>
+                                    <a href="" class="btn btn-light">Документы</a>
+                                    <a href="" class="btn btn-warning">Настройки профиля</a>
                                 </div>
                             </div>
 

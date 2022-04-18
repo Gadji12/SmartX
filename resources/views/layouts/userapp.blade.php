@@ -242,7 +242,7 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        <a href="index.html"><img src="{{asset('index/img/black_flogo.svg')}}" width="150" alt="Meemoney"></a>
+        <a href="{{route('user-dashboard')}}"><img src="{{asset('index/img/black_flogo.svg')}}" width="150" alt="Meemoney"></a>
     </div>
     <div class="menu">
         <ul class="list">
@@ -259,9 +259,10 @@
 {{--            <li><a href="{{route('product.index')}}"><i class="zmdi zmdi-shopping-cart"></i><span>Мои Продукты</span></a></li>--}}
 
 
-            <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-shopping-cart"></i><span>Мои Продукты</span></a>
+            <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-shopping-cart"></i><span>Продукты</span></a>
                 <ul class="ml-menu">
-                    <li><a href="blog-dashboard.html" class=" waves-effect waves-block">Создать</a></li>
+                    <li><a href="{{route('products.index')}}" class=" waves-effect waves-block">Продукты</a></li>
+                    <li><a href="{{route('products.create')}}" class=" waves-effect waves-block">Мои продукты</a></li>
 {{--                    <li><a href="blog-post.html" class=" waves-effect waves-block">Blog Post</a></li>--}}
 {{--                    <li><a href="blog-list.html" class=" waves-effect waves-block">List View</a></li>--}}
 {{--                    <li><a href="blog-grid.html" class=" waves-effect waves-block">Grid View</a></li>--}}
@@ -271,10 +272,10 @@
             <li><a href="{{route('user-portfolio')}}"><i class="zmdi zmdi-file"></i><span>Мои инвестиции</span></a></li>
             <li><a href="{{route('user-referals')}}"><i class="zmdi zmdi-accounts"></i><span>Рефералы</span></a></li>
             <li><a href="{{route('user-financial')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Финансы</span></a></li>
-{{--            <form action="{{route('logout')}}" method="POST">--}}
-{{--                @csrf--}}
-{{--                <button type="submit" class="btn-neutral"><i class="zmdi zmdi-minus-circle"></i><span>Выход</span></button>--}}
-{{--            </form>--}}
+            <form action="{{route('logout')}}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger ml-3"><i class="zmdi zmdi-power"></i><span> Выход</span></button>
+            </form>
 
         </ul>
     </div>
