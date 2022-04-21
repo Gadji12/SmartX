@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('home');
-})->name('homepage');
+Route::redirect('/','register');
+
 
 Route::post('/logout',[\App\Http\Controllers\Auth\LogoutController::class,'perform'])->name('logout');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')->middleware('auth')->group(function (){
@@ -53,8 +53,12 @@ Route::prefix('user')->middleware('auth')->group(function (){
     Route::group(['middleware' => ['role:user']],function (){
 
         Route::get('/profile',function (){
-            return view('user.profile');
+            return view('user.profile.myprofile');
         })->name('user-profile');
+
+        Route::get('/requisites',function (){
+            return view('user.profile.requisites');
+        })->name('user-requisites');
 
         Route::get('/dashboard',function (){
             return view('user.userdashboard');
@@ -72,6 +76,10 @@ Route::prefix('user')->middleware('auth')->group(function (){
             return view('user.financial.financial');
         })->name('user-financial');
 
+        Route::get('/affiliate',function (){
+            return view('user.affiliate');
+        })->name('user-affiliate');
+
         Route::get('/financial/withdrawal',function (){
             return view('user.financial.withdrawal');
         })->name('user-withdrawal');
@@ -85,7 +93,7 @@ Route::prefix('user')->middleware('auth')->group(function (){
         })->name('user-project');
 
         Route::resources([
-            'products' =>\App\Http\Controllers\UserProductController::class
+            'offers' =>\App\Http\Controllers\UserProductController::class
         ]);
     });
 });

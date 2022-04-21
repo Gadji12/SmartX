@@ -259,23 +259,44 @@
 {{--            <li><a href="{{route('product.index')}}"><i class="zmdi zmdi-shopping-cart"></i><span>Мои Продукты</span></a></li>--}}
 
 
-            <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-shopping-cart"></i><span>Продукты</span></a>
+            <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-shopping-cart"></i><span>Проекты</span></a>
                 <ul class="ml-menu">
-                    <li><a href="{{route('products.index')}}" class=" waves-effect waves-block">Продукты</a></li>
-                    <li><a href="{{route('products.create')}}" class=" waves-effect waves-block">Мои продукты</a></li>
-{{--                    <li><a href="blog-post.html" class=" waves-effect waves-block">Blog Post</a></li>--}}
-{{--                    <li><a href="blog-list.html" class=" waves-effect waves-block">List View</a></li>--}}
-{{--                    <li><a href="blog-grid.html" class=" waves-effect waves-block">Grid View</a></li>--}}
-{{--                    <li><a href="blog-details.html" class=" waves-effect waves-block">Blog Details</a></li>--}}
+                    <li><a href="{{route('offers.index')}}" class=" waves-effect waves-block">Список проектов</a></li>
+                    <li><a href="{{route('user-project')}}" class=" waves-effect waves-block">Мои проекты</a></li>
                 </ul>
             </li>
+
             <li><a href="{{route('user-portfolio')}}"><i class="zmdi zmdi-file"></i><span>Мои инвестиции</span></a></li>
             <li><a href="{{route('user-referals')}}"><i class="zmdi zmdi-accounts"></i><span>Рефералы</span></a></li>
             <li><a href="{{route('user-financial')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Финансы</span></a></li>
-            <form action="{{route('logout')}}" method="POST">
+            <li><a href="{{route('user-affiliate')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Партнерская программа</span></a></li>
+
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-hc-fw"></i><span>Центр поддержки</span></a>
+                <ul class="ml-menu">
+                    <li><a class=" waves-effect waves-block">Как работает краудинвестинг</a></li>
+                    <li><a class=" waves-effect waves-block">Почему инвестиции в бизнес считаются высокорисковыми</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-hc-fw"></i><span>Ответственность</span></a>
+                <ul class="ml-menu">
+                    <li><a class=" waves-effect waves-block">Персональные данные</a></li>
+                    <li><a class=" waves-effect waves-block">Положение об ответственности</a></li>
+                    <li><a class=" waves-effect waves-block">Пользовательское соглашения</a></li>
+                </ul>
+            </li>
+
+            <hr>
+            <li><a><i class="zmdi zmdi-hc-fw"></i></i><span>Новости</span></a></li>
+            <li><a><i class="zmdi zmdi-hc-fw"></i><span>О Нас</span></a></li>
+            <li><a><i class="zmdi zmdi-hc-fw"></i></i><span>Контакты</span></a></li>
+            <li><a><i class="zmdi zmdi-hc-fw"></i><span>Как это работает</span></a></li>
+
+            <li><a><form action="{{route('logout')}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-danger ml-3"><i class="zmdi zmdi-power"></i><span> Выход</span></button>
-            </form>
+                </form>
+                </a>
+            </li>
 
         </ul>
     </div>

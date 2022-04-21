@@ -21,7 +21,7 @@
                 <div class="card widget_2 traffic">
                     <div class="body">
                         <h6>Привлечено рефералов</h6>
-                        <h2 class="text-warning">0</h2>
+                        <h2 class="text-warning">1</h2>
                     </div>
                 </div>
             </div>

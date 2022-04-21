@@ -19,6 +19,7 @@ class UserProductController extends Controller
         $products = UserProduct::all();
         return view('user.product.index',[
             'products' => $products,
+            'offers'=>  Offer::all()
         ]);
     }
 
@@ -61,11 +62,12 @@ class UserProductController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
+     * @param  \App\Models\Offer  $offer
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function show(UserProduct $product)
+    public function show(Offer $offer)
     {
-        return view('user.product.show',compact('product'));
+        return view('user.product.show',compact('offer'));
     }
 
     /**

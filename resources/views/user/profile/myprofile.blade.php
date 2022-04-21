@@ -29,6 +29,7 @@
                                     <p class="text-muted">{{Auth::user()->email}} </p>
                                     <a href="" class="btn btn-light">Документы</a>
                                     <a href="" class="btn btn-warning">Настройки профиля</a>
+                                    <a href="{{route('user-requisites')}}" class="btn btn-info">Реквизиты</a>
                                 </div>
                             </div>
 

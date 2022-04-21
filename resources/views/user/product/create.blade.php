@@ -19,7 +19,7 @@
         </div>
 
         <!-- Form start -->
-        <form action="{{route('products.store')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('offers.store')}}" method="post" enctype="multipart/form-data">
             @csrf
 
             <div class="container-fluid">

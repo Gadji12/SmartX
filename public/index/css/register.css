@@ -1,6 +1,6 @@
-form {
-    overflow-y: scroll !important;
-}
+/*form {*/
+/*    overflow-y: scroll !important;*/
+/*}*/
 .form__group p{
     position: absolute;
     width: 340px;
@@ -36,17 +36,17 @@ form {
 }
 
 
-form{
-    width: 450px; height: 100%;
-    background: #fff;
-    z-index: 1;
-    margin: 0 auto;
-    margin-top: 0px;
-    top: 0;
-    padding: 35px 50px;
-    position: fixed;
-    right: 0;
-}
+/*form{*/
+/*    width: 450px; height: 100%;*/
+/*    background: #fff;*/
+/*    z-index: 1;*/
+/*    margin: 0 auto;*/
+/*    margin-top: 0px;*/
+/*    top: 0;*/
+/*    padding: 35px 50px;*/
+/*    position: fixed;*/
+/*    right: 0;*/
+/*}*/
 .bgmask{
     background: linear-gradient(rgba(0,0,0,.0) 50%, rgba(0,0,0,1));
     height: 100%; width: 100%;

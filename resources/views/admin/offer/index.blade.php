@@ -45,23 +45,21 @@
                             <div class="table-responsive">
                                 <table class="table c_table inbox_table">
 
-                                    @if(empty($offers))
+                                    @if(!empty($offers))
                                         <tr>
                                             <h2>НЕТ ОФФЕРОВ</h2>
                                         </tr>
                                     @else
                                         @foreach($offers as $offer)
                                             <tr>
-                                                <td class="u_image"><img src="{{asset('/storage/'. $offer->picture_offer)}}" alt="user" class="rounded" width="100" ></td>
+                                                <td class="u_image"><img src="{{asset('/storage/'. $offer->picture_offer)}}" alt="user" class="rounded"></td>
                                                 <td class="u_name"><h5 class="font-15 mt-0 mb-0">{{$offer->offer_name}}</h5></td>
                                                 <td class="max_ellipsis">
                                                     <a class="link" href="{{route('offers.show',$offer)}}">
-{{--                                                        <span class="badge badge-info mr-2">Marketing</span>--}}
                                                         {{$offer->desc_offer}}
                                                     </a>
                                                 </td>
                                                 <td class="clip"><i class="zmdi zmdi-attachment-alt"></i></td>
-{{--                                                <td class="time">{{$offer->created_at}}</td>--}}
                                             </tr>
                                         @endforeach
                                     @endif
