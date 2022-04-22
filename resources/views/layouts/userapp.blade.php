@@ -75,43 +75,43 @@
         <li class="dropdown">
             <a href="javascript:void(0);" class="dropdown-toggle" title="App" data-toggle="dropdown" role="button"><i class="zmdi zmdi-apps"></i></a>
             <ul class="dropdown-menu slideUp2">
-                <li class="header">App Sortcute</li>
+                <li class="header">Быстрая навигация</li>
                 <li class="body">
                     <ul class="menu app_sortcut list-unstyled">
                         <li>
-                            <a href="image-gallery.html">
-                                <div class="icon-circle mb-2 bg-blue"><i class="zmdi zmdi-camera"></i></div>
-                                <p class="mb-0">Photos</p>
+                            <a href="{{route('user-dashboard')}}">
+                                <div class="icon-circle mb-2 bg-pink"><i class="zmdi zmdi-home"></i></div>
+                                <p class="mb-0">Главная</p>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle mb-2 bg-amber"><i class="zmdi zmdi-translate"></i></div>
-                                <p class="mb-0">Translate</p>
+                            <a href="{{route('user-profile')}}">
+                                <div class="icon-circle mb-2 bg-blue"><i class="zmdi zmdi-account"></i></div>
+                                <p class="mb-0">Мой профиль</p>
                             </a>
                         </li>
                         <li>
-                            <a href="events.html">
-                                <div class="icon-circle mb-2 bg-green"><i class="zmdi zmdi-calendar"></i></div>
-                                <p class="mb-0">Calendar</p>
+                            <a href="{{route('projects.index')}}">
+                                <div class="icon-circle mb-2 bg-amber"><i class="zmdi zmdi-shopping-cart"></i></div>
+                                <p class="mb-0">Проекты</p>
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html">
-                                <div class="icon-circle mb-2 bg-purple"><i class="zmdi zmdi-account-calendar"></i></div>
-                                <p class="mb-0">Contacts</p>
+                            <a href="{{route('user-portfolio')}}">
+                                <div class="icon-circle mb-2 bg-purple"><i class="zmdi zmdi-case"></i></div>
+                                <p class="mb-0">Инвестиции</p>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle mb-2 bg-red"><i class="zmdi zmdi-tag"></i></div>
-                                <p class="mb-0">News</p>
+                            <a href="{{route('user-referals')}}">
+                                <div class="icon-circle mb-2 bg-green"><i class="zmdi zmdi-accounts"></i></div>
+                                <p class="mb-0">Рефералы</p>
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle mb-2 bg-grey"><i class="zmdi zmdi-map"></i></div>
-                                <p class="mb-0">Maps</p>
+                            <a href="{{route('user-financial')}}">
+                                <div class="icon-circle mb-2 bg-purple"><i class="zmdi zmdi-balance-wallet"></i></div>
+                                <p class="mb-0">Финансы</p>
                             </a>
                         </li>
                     </ul>
@@ -123,75 +123,22 @@
                 <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
             </a>
             <ul class="dropdown-menu slideUp2">
-                <li class="header">Notifications</li>
+                <li class="header">Уведомления</li>
                 <li class="body">
                     <ul class="menu list-unstyled">
                         <li>
                             <a href="javascript:void(0);">
                                 <div class="icon-circle bg-blue"><i class="zmdi zmdi-account"></i></div>
                                 <div class="menu-info">
-                                    <h4>8 New Members joined</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 14 mins ago </p>
+                                    <h4>Это пример уведомления</h4>
+                                    <p><i class="zmdi zmdi-time"></i> 14 минут назад </p>
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-amber"><i class="zmdi zmdi-shopping-cart"></i></div>
-                                <div class="menu-info">
-                                    <h4>4 Sales made</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 22 mins ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-red"><i class="zmdi zmdi-delete"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>Nancy Doe</b> Deleted account</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 3 hours ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-green"><i class="zmdi zmdi-edit"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>Nancy</b> Changed name</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 2 hours ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-grey"><i class="zmdi zmdi-comment-text"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>John</b> Commented your post</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 4 hours ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-purple"><i class="zmdi zmdi-refresh"></i></div>
-                                <div class="menu-info">
-                                    <h4><b>John</b> Updated status</h4>
-                                    <p><i class="zmdi zmdi-time"></i> 3 hours ago </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">
-                                <div class="icon-circle bg-light-blue"><i class="zmdi zmdi-settings"></i></div>
-                                <div class="menu-info">
-                                    <h4>Settings Updated</h4>
-                                    <p><i class="zmdi zmdi-time"></i> Yesterday </p>
-                                </div>
-                            </a>
-                        </li>
+
                     </ul>
                 </li>
-                <li class="footer"> <a href="javascript:void(0);">View All Notifications</a> </li>
+                <li class="footer"> <a href="javascript:void(0);">Все уведомления</a> </li>
             </ul>
         </li>
 
@@ -201,7 +148,7 @@
 
             <ul class="dropdown-menu slideUp2">
                 <li class="header">Ваш баланс <small class="float-right">
-                        <a href="javascript:void(0);">Подробнее</a></small>
+                        <a href="{{route('user-financial')}}">Подробнее</a></small>
                 </li>
 
                 <li class="body">
@@ -230,9 +177,6 @@
                 </li>
             </ul>
         </li>
-        <li><a href="javascript:void(0);" class="app_calendar" title="Calendar"><i class="zmdi zmdi-calendar"></i></a></li>
-        <li><a href="javascript:void(0);" class="app_google_drive" title="Google Drive"><i class="zmdi zmdi-google-drive"></i></a></li>
-        <li><a href="javascript:void(0);" class="app_group_work" title="Group Work"><i class="zmdi zmdi-group-work"></i></a></li>
         <li><a href="javascript:void(0);" class="js-right-sidebar" title="Setting"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
         <li><a href="sign-in.html" class="mega-menu" title="Sign Out"><i class="zmdi zmdi-power"></i></a></li>
     </ul>
@@ -269,8 +213,7 @@
             <li><a href="{{route('user-portfolio')}}"><i class="zmdi zmdi-file"></i><span>Мои инвестиции</span></a></li>
             <li><a href="{{route('user-referals')}}"><i class="zmdi zmdi-accounts"></i><span>Рефералы</span></a></li>
             <li><a href="{{route('user-financial')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Финансы</span></a></li>
-            <li><a href="{{route('user-affiliate')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Партнерская программа</span></a></li>
-
+            <li><a href="{{route('user-affiliate')}}"><i class="zmdi zmdi-hc-fw"></i><span>Партнерская программа</span></a></li>
             <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-hc-fw"></i><span>Центр поддержки</span></a>
                 <ul class="ml-menu">
                     <li><a class=" waves-effect waves-block">Как работает краудинвестинг</a></li>
@@ -284,19 +227,17 @@
                     <li><a class=" waves-effect waves-block">Пользовательское соглашения</a></li>
                 </ul>
             </li>
-
             <hr>
             <li><a><i class="zmdi zmdi-hc-fw"></i></i><span>Новости</span></a></li>
             <li><a><i class="zmdi zmdi-hc-fw"></i><span>О Нас</span></a></li>
             <li><a><i class="zmdi zmdi-hc-fw"></i></i><span>Контакты</span></a></li>
             <li><a><i class="zmdi zmdi-hc-fw"></i><span>Как это работает</span></a></li>
 
-            <li><a><form action="{{route('logout')}}" method="POST">
+            <a><form action="{{route('logout')}}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-danger ml-3"><i class="zmdi zmdi-power"></i><span> Выход</span></button>
                 </form>
-                </a>
-            </li>
+            </a>
 
         </ul>
     </div>
@@ -312,20 +253,20 @@
         <div class="tab-pane active" id="setting">
             <div class="slim_scroll">
                 <div class="card">
-                    <h6>Theme Option</h6>
+                    <h6>Выбор темы</h6>
                     <div class="light_dark">
                         <div class="radio">
                             <input type="radio" name="radio1" id="lighttheme" value="light" checked="">
-                            <label for="lighttheme">Light Mode</label>
+                            <label for="lighttheme">Светлая тема</label>
                         </div>
                         <div class="radio mb-0">
                             <input type="radio" name="radio1" id="darktheme" value="dark">
-                            <label for="darktheme">Dark Mode</label>
+                            <label for="darktheme">Темная тема</label>
                         </div>
                     </div>
                 </div>
                 <div class="card">
-                    <h6>Color Skins</h6>
+                    <h6>Цветовые схемы</h6>
                     <ul class="choose-skin list-unstyled">
                         <li data-theme="purple"><div class="purple"></div></li>
                         <li data-theme="blue"><div class="blue"></div></li>
@@ -336,42 +277,24 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h6>General Settings</h6>
+                    <h6>Визуальные настройки</h6>
                     <ul class="setting-list list-unstyled">
                         <li>
                             <div class="checkbox rtl_support">
                                 <input id="checkbox1" type="checkbox" value="rtl_view">
-                                <label for="checkbox1">RTL Version</label>
+                                <label for="checkbox1">Развернутая версия</label>
                             </div>
                         </li>
                         <li>
                             <div class="checkbox ms_bar">
                                 <input id="checkbox2" type="checkbox" value="mini_active">
-                                <label for="checkbox2">Mini Sidebar</label>
+                                <label for="checkbox2">Мини сайдбар</label>
                             </div>
                         </li>
                         <li>
                             <div class="checkbox">
                                 <input id="checkbox3" type="checkbox" checked="">
-                                <label for="checkbox3">Notifications</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <input id="checkbox4" type="checkbox">
-                                <label for="checkbox4">Auto Updates</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <input id="checkbox5" type="checkbox" checked="">
-                                <label for="checkbox5">Offline</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox">
-                                <input id="checkbox6" type="checkbox" checked="">
-                                <label for="checkbox6">Location Permission</label>
+                                <label for="checkbox3">Звук уведомления</label>
                             </div>
                         </li>
                     </ul>

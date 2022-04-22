@@ -19,7 +19,7 @@ class OfferController extends Controller
     public function index()
     {
         return view('admin.offer.index',[
-            'offers'=>  Offer::all()
+            'projects'=>  Offer::all()
 
             ]);
     }
@@ -42,42 +42,42 @@ class OfferController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $offer = new Offer();
-        $offer -> offer_name = $request->input('offer_name');
-        $offer -> desc_offer = $request->input('desc_offer');
-        $offer -> price_per_offer = $request->input('price_per_offer');
-        $offer -> number_shares_offer = $request->input('number_shares_offer');
-        $offer -> end_date_offer = $request->input('end_date_offer');
+        $project = new Offer();
+        $project -> offer_name = $request->input('offer_name');
+        $project -> desc_offer = $request->input('desc_offer');
+        $project -> price_per_offer = $request->input('price_per_offer');
+        $project -> number_shares_offer = $request->input('number_shares_offer');
+        $project -> end_date_offer = $request->input('end_date_offer');
 
         if ($request->hasFile('picture_offer')){
-            $offer -> picture_offer = $request ->file('picture_offer')->store('picture_offer','public');
+            $project -> picture_offer = $request ->file('picture_offer')->store('picture_offer','public');
 
 
 //            \Intervention\Image\Facades\Image::make('picture_offer')->resize(300,300)->save(public_path('picture_offer/'));
         }
-        $offer->save();
-        return redirect()->route('offers.index')->with('alert','Оффер успешно создан');
+        $project->save();
+        return redirect()->route('projects.index')->with('alert','Оффер успешно создан');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Offer  $offer
+     * @param  \App\Models\Offer  $project
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
-    public function show(Offer $offer)
+    public function show(Offer $project)
     {
 //        dd($offer);
-        return view('admin.offer.show', compact('offer'));
+        return view('admin.offer.show', compact('project'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Offer  $offer
+     * @param  \App\Models\Offer  $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(Offer $offer)
+    public function edit(Offer $project)
     {
         //
     }
@@ -112,15 +112,15 @@ class OfferController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Offer  $offer
+     * @param  \App\Models\Offer  $project
      * @return RedirectResponse|\Illuminate\Http\Response
      */
-    public function destroy(Offer $offer)
+    public function destroy(Offer $project)
     {
-        if ($offer->picture_offer){
-            Storage::delete("storage/'. $offer->picture_offer");
+        if ($project->picture_offer){
+            Storage::delete("storage/'. $project->picture_offer");
         }
-        $offer->delete();
-        return redirect()->route('offers.index');
+        $project->delete();
+        return redirect()->route('projects.index');
     }
 }

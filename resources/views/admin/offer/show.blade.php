@@ -30,7 +30,7 @@
                             <div class="row">
                                 <div class="col-xl-3 col-lg-4 col-md-12">
                                     <div class="preview preview-pic tab-content">
-                                        <div class="tab-pane active" id="product_1"><img src="{{asset('/storage/'. $offer->picture_offer)}}" class="img-fluid" alt="" /></div>
+                                        <div class="tab-pane active" id="product_1"><img src="{{asset('/storage/'. $project->picture_offer)}}" class="img-fluid" alt="" /></div>
 {{--                                        <div class="tab-pane" id="product_2"><img src="{{asset('/storage/'. $offer->picture_offer)}}" class="img-fluid" alt=""/></div>--}}
 {{--                                        <div class="tab-pane" id="product_3"><img src="{{asset('/storage/'. $offer->picture_offer)}}" class="img-fluid" alt=""/></div>--}}
 {{--                                        <div class="tab-pane" id="product_4"><img src="{{asset('/storage/'. $offer->picture_offer)}}" class="img-fluid" alt=""/></div>--}}
@@ -44,12 +44,12 @@
                                 </div>
                                 <div class="col-xl-9 col-lg-8 col-md-12">
                                     <div class="product details">
-                                        <h3 class="product-title mb-0">{{$offer->offer_name}}</h3>
+                                        <h3 class="product-title mb-0">{{$project->offer_name}}</h3>
                                         <h5 class="price mt-0">Текущая ставка: <span class="col-amber">$180</span></h5>
                                         <h6>Статус : <span class="text-danger"> Неактивен</span></h6>
                                         <h6>Требует подтверждения : <span class="text-danger"> Нет</span></h6>
                                         <hr>
-                                        <p class="product-description">{{$offer->desc_offer}}</p>
+                                        <p class="product-description">{{$project->desc_offer}}</p>
                                         <div class="action">
                                             <button class="btn btn-success waves-effect" type="button">Одобрить оффер</button>
                                             <button class="btn btn-warning waves-effect" type="button">Скрыть оффер</button>
@@ -65,7 +65,7 @@
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default btn-round waves-effect">Отменить</button>
 
-                                                            <form action="{{ route('offers.destroy', $offer) }}" method="POST">
+                                                            <form action="{{ route('projects.destroy', $project) }}" method="POST">
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <button type="submit" class="btn btn-danger waves-effect">Удалить оффер</button>

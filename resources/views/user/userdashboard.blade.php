@@ -45,14 +45,14 @@
                 <div class="card widget_2 sales">
                     <div class="body">
                         <div class="row">
-                            <div class="col-lg-7 col-md-6 col-sm-12">
+                            <div class="col-lg-9 col-md-6 col-sm-12">
                                 <h6>Активные инвестиции</h6>
                                 <small>Актуальная сумма, которая инвестирована в проекты</small>
                                 <h2><span style="color:green;">0<span style="font-size:18px;">₽</span></span></h2>
                             </div>
-                            <div class="col-lg-5 col-md-6 col-sm-12">
-                                <a href="{{route('offers.index')}}" class="btn btn-primary mt-2 mb-2 ml-1">Инвестировать</a>
-                                <a href="{{route('user-project')}}" class="btn btn-primary mt-2 mb-2">Мои проекты</a><br>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <a href="{{route('offers.index')}}" class="btn btn-primary mt-2 mb-2 ">Инвестировать</a>
+                                <a href="{{route('user-project')}}" class="btn btn-primary mt-2 mb-2 ml-3">Мои проекты</a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                                 <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3 ml-4">Переводы</a>
+                                <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3 ml-5">Переводы</a>
                             </div>
                         </div>
                     </div>

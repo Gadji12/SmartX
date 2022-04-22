@@ -18,7 +18,6 @@
 </head>
 
 <body class="theme-blush">
-
 <div class="authentication">
     <div class="container">
         <div class="row">
@@ -30,7 +29,12 @@
                         <span class="text-danger ">У вас недостаточно прав для просмотра этой страницы!</span>
                     </div>
                     <div class="body">
-                        <a href="{{route('homepage')}}" class="btn btn-primary btn-block waves-effect waves-light text-white">НА СТРАНИЦУ АВТОРИЗАЦИИ</a>
+                        @role('admin')
+                        <a href="{{route('admin_dashboard')}}" class="btn btn-primary btn-block waves-effect waves-light text-white">НА ГЛАВНУЮ СТРАНИЦУ</a>
+                        @endrole
+                        @role('user')
+                        <a href="{{route('user-dashboard')}}" class="btn btn-primary btn-block waves-effect waves-light text-white">НА ГЛАВНУЮ СТРАНИЦУ</a>
+                        @endrole
                         <div class="signin_with mt-3">
                             <a href="javascript:void(0);" class="link">Нужна помощь?</a>
                         </div>
@@ -39,7 +43,7 @@
                 <div class="copyright text-center">
                     &copy;
                     <script>document.write(new Date().getFullYear())</script>,
-                    <span>Designed by <a href="https://thememakker.com/" target="_blank">Х!АЖИ</a></span>
+{{--                    <span>Designed by <a href="https://thememakker.com/" target="_blank">Х!АЖИ</a></span>--}}
                 </div>
             </div>
             <div class="col-lg-8 col-sm-12">

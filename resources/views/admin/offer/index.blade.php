@@ -28,11 +28,11 @@
                         </div>
                         <div class="inbox left" id="email-nav">
                             <div class="mail-compose mb-4">
-                                <a href="{{route('offers.create')}}" class="btn btn-danger btn-block">Добавить оффер</a>
+                                <a href="{{route('projects.create')}}" class="btn btn-danger btn-block">Добавить оффер</a>
                             </div>
                             <div class="mail-side">
                                 <ul class="nav">
-                                    <li class="active"><a href="mail-inbox.html"><i class="zmdi zmdi-inbox"></i>Все<span class="badge badge-primary">6</span></a></li>
+                                    <li class="active"><a href="mail-inbox.html"><i class="zmdi zmdi-inbox"></i>Все<span class="badge badge-primary">{{DB::table('offers')->count()}}</span></a></li>
                                     <li><a href="javascript:void(0);"><i class="zmdi zmdi-mail-send"></i>Ожидают<span class="badge badge-warning">6</span></a></li>
                                     <li><a href="javascript:void(0);"><i class="zmdi zmdi-badge-check"></i>Одобренные <span class="badge badge-success">6</span> </a></li>
                                     <li><a href="javascript:void(0);"><i class="zmdi zmdi-email"></i>Заявки</a></li>
@@ -44,19 +44,18 @@
 
                             <div class="table-responsive">
                                 <table class="table c_table inbox_table">
-
-                                    @if(!empty($offers))
+                                    @if(empty($projects))
                                         <tr>
-                                            <h2>НЕТ ОФФЕРОВ</h2>
+                                            <h2 class="text-center mt-5">НЕТ ОФФЕРОВ</h2>
                                         </tr>
                                     @else
-                                        @foreach($offers as $offer)
+                                        @foreach($projects as $project)
                                             <tr>
-                                                <td class="u_image"><img src="{{asset('/storage/'. $offer->picture_offer)}}" alt="user" class="rounded"></td>
-                                                <td class="u_name"><h5 class="font-15 mt-0 mb-0">{{$offer->offer_name}}</h5></td>
+                                                <td class="u_image"><img src="{{asset('/storage/'. $project->picture_offer)}}" alt="user" class="rounded"></td>
+                                                <td class="u_name"><h5 class="font-15 mt-0 mb-0">{{$project->offer_name}}</h5></td>
                                                 <td class="max_ellipsis">
-                                                    <a class="link" href="{{route('offers.show',$offer)}}">
-                                                        {{$offer->desc_offer}}
+                                                    <a class="link" href="{{route('projects.show',$project)}}">
+                                                        {{$project->desc_offer}}
                                                     </a>
                                                 </td>
                                                 <td class="clip"><i class="zmdi zmdi-attachment-alt"></i></td>

@@ -42,7 +42,7 @@ Route::prefix('admin')->middleware('auth')->group(function (){
         })->name('admin-userlist');
 
         Route::resources([
-            'offers' =>\App\Http\Controllers\OfferController::class
+            'projects' =>\App\Http\Controllers\OfferController::class
         ]);
 
     });
@@ -95,5 +95,6 @@ Route::prefix('user')->middleware('auth')->group(function (){
         Route::resources([
             'offers' =>\App\Http\Controllers\UserProductController::class
         ]);
+
     });
 });

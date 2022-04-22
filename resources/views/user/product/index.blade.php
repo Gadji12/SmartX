@@ -9,7 +9,6 @@
                         <li class="breadcrumb-item"><a href="main"><i class="zmdi zmdi-home"></i> Smart X-Investment</a></li>
                         <li class="breadcrumb-item active">Список проектов</li>
                     </ul>
-                    <a href="{{route('offers.create')}}" class="btn btn-primary text-white mt-2" type="button">Создать продукт</a>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
