@@ -24,7 +24,7 @@
                     <div class="card">
                         <div class="body">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table ml-sm-auto">
                                     <thead>
                                     <tr>
                                         <th>Проект</th>

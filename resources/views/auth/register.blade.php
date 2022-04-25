@@ -32,7 +32,7 @@
                 <img src="{{asset('index/img/steps.svg')}}" class="steps" alt="">
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12 sidebar">
-                <div class="card w-auto">
+                <div class="card w-auto rounded">
                      <div class="body">
                          <form method="POST" action="{{route('register')}}">
                              @csrf

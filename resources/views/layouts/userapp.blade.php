@@ -45,13 +45,13 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="{{asset('admin/plugins/select2/select2.css')}}" />
     <link rel="stylesheet" href="{{asset('admin/plugins/jquery-datatable/dataTables.bootstrap4.min.css')}}">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+{{--    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />--}}
+{{--    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>--}}
     <link href="{{asset('admin/plugins/select2/select2.css')}}" rel="stylesheet" />
+    <link href="{{asset('admin/plugins/bootstrap/css/bootstrap-grid.css')}}" rel="stylesheet" />
+{{--    <link href="{{asset('admin/plugins/summernote/summernote-bs3.css')}}" rel="stylesheet" />--}}
+{{--    <link href="{{asset('index/css/custom.css')}}" rel="stylesheet" />--}}
 
-{{--    <link href="{{asset('profile/css/style.css')}}" rel="stylesheet" />--}}
-
-    {{--    <script src="{{asset('select')}}"></script>--}}
 </head>
 <style>
 
@@ -141,8 +141,6 @@
                 <li class="footer"> <a href="javascript:void(0);">Все уведомления</a> </li>
             </ul>
         </li>
-
-
         <li class="dropdown">
             <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-balance-wallet"></i></a>
 
@@ -198,22 +196,20 @@
                         <small>Пользователь</small>
                     </div>
                 </div>
+
             <li><a href="{{route('user-profile')}}"><i class="zmdi zmdi-account"></i><span>Мой профиль</span></a></li>
             <li><a href="{{route('user-dashboard')}}"><i class="zmdi zmdi-home"></i><span>Главная</span></a></li>
-{{--            <li><a href="{{route('product.index')}}"><i class="zmdi zmdi-shopping-cart"></i><span>Мои Продукты</span></a></li>--}}
-
-
             <li> <a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-shopping-cart"></i><span>Проекты</span></a>
                 <ul class="ml-menu">
                     <li><a href="{{route('offers.index')}}" class=" waves-effect waves-block">Список проектов</a></li>
                     <li><a href="{{route('user-project')}}" class=" waves-effect waves-block">Мои проекты</a></li>
                 </ul>
             </li>
-
             <li><a href="{{route('user-portfolio')}}"><i class="zmdi zmdi-file"></i><span>Мои инвестиции</span></a></li>
             <li><a href="{{route('user-referals')}}"><i class="zmdi zmdi-accounts"></i><span>Рефералы</span></a></li>
             <li><a href="{{route('user-financial')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Финансы</span></a></li>
             <li><a href="{{route('user-affiliate')}}"><i class="zmdi zmdi-hc-fw"></i><span>Партнерская программа</span></a></li>
+            <hr>
             <li><a href="javascript:void(0);" class="menu-toggle waves-effect waves-block"><i class="zmdi zmdi-hc-fw"></i><span>Центр поддержки</span></a>
                 <ul class="ml-menu">
                     <li><a class=" waves-effect waves-block">Как работает краудинвестинг</a></li>
@@ -227,15 +223,14 @@
                     <li><a class=" waves-effect waves-block">Пользовательское соглашения</a></li>
                 </ul>
             </li>
-            <hr>
             <li><a><i class="zmdi zmdi-hc-fw"></i></i><span>Новости</span></a></li>
             <li><a><i class="zmdi zmdi-hc-fw"></i><span>О Нас</span></a></li>
             <li><a><i class="zmdi zmdi-hc-fw"></i></i><span>Контакты</span></a></li>
             <li><a><i class="zmdi zmdi-hc-fw"></i><span>Как это работает</span></a></li>
-
-            <a><form action="{{route('logout')}}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-danger ml-3"><i class="zmdi zmdi-power"></i><span> Выход</span></button>
+            <a>
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger ml-3"><i class="zmdi zmdi-power"></i><span> Выход</span></button>
                 </form>
             </a>
 
@@ -405,7 +400,7 @@
 <script src="{{asset('admin/plugins/jquery-datatable/buttons/buttons.print.min.js')}}"></script>
 
 <script src="{{asset('admin/plugins/select2/select2.min.js')}}"></script> <!-- Select2 Js -->
-<script src="{{asset('admin/js/pages/forms/advanced-form-elements.js')}}"></script>
+{{--<script src="{{asset('admin/js/pages/forms/advanced-form-elements.js')}}"></script>--}}
 <script src="{{asset('admin/js/pages/tables/jquery-datatable.js')}}"></script>
 
 </body>
