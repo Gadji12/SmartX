@@ -17,7 +17,9 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-
+            $table->unsignedBigInteger('referrer_id')->nullable();
+            $table->foreign('referrer_id')->references('id')->on('users');
+            $table->string('username')->unique();
 //            $table->string('lastname')->nullable();
 //            $table->string('phone')->nullable();
 //            $table->string('promocode')->nullable();

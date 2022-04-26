@@ -21,7 +21,7 @@
                 <div class="card widget_2 traffic">
                     <div class="body">
                         <h6>Привлечено рефералов</h6>
-                        <h2 class="text-warning">1</h2>
+                        <h2 class="text-warning">{{ count(Auth::user()->referrals)  ?? '0' }}</h2>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                     <div class="body">
                         <p>Ваша реферальная ссылка</p>
 
-                        <input type="text" class="form-control" value="http://smartx.beget.tech/referal_reg.php?id=124" disabled="">
+                        <input type="text" class="form-control" value="{{ Auth::user()->referral_link }}" disabled="">
                         <br>
                         <!--div class="text-right js-sweetalert">
                             <button class="btn btn-primary waves-effect" onclick="alertGenerate('Ссылка успешно скопирована!', 'success');">Скопировать ссылку</button>

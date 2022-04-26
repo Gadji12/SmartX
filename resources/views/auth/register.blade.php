@@ -50,6 +50,16 @@
                                  @enderror
                              </div>
 
+{{--                             <div class="form__group" style="margin-top: 15px;">--}}
+{{--                                 <label for="name">Логин</label>--}}
+{{--                                 <input type="text" id="name" name="username" value="{{old('username')}}" class="@error('username') is-invalid @enderror">--}}
+
+{{--                                 @error('username')--}}
+{{--                                 <span class="invalid-feedback" role="alert">--}}
+{{--                                     <p>{{ $message }}</p>--}}
+{{--                                 </span>--}}
+{{--                                 @enderror--}}
+{{--                             </div>--}}
                              {{--        <div class="form__group" style="margin-top: 15px;">--}}
                              {{--            <label for="lastname">Фамилия</label>--}}
                              {{--            <input type="text" id="lastname" name="lastname" value="{{old('lastname')}}" class="@error('lastname') is-invalid @enderror">--}}

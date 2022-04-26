@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Notifications\referalNotification;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -23,6 +26,20 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+
+    /**
+     * Показать регистрационную форму заявки.
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
+     */
+    public function showRegistrationForm(Request $request)
+    {
+        if ($request->has('ref')) {
+            session(['referrer' => $request->query('ref')]);
+        }
+
+        return view('auth.register');
+    }
 
     /**
      * Where to redirect users after registration.
@@ -56,7 +73,7 @@ class RegisterController extends Controller
 //            'login' => ['required', 'string', 'max:255'],
 //            'phone' => ['required', 'string', 'max:15'],
 //            'promocode' => ['required','string', 'min:10', 'max:11'],
-
+//            'username' => ['required', 'string', 'unique:users', 'alpha_dash', 'min:3', 'max:30'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -70,20 +87,33 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
+//        dd($data);
+        $referrer = User::whereUsername(session()->pull('referrer'))->first();
         $user = User::create([
             'name' => $data['name'],
-
-//            'lastname' => $data['lastname'],
-//            'login' => $data['login'],
-//            'phone' => $data['phone'],
-//            'promocode' => $data['promocode'],
-
+            'username' => $data['name'],
             'email' => $data['email'],
+            'referrer_id' => $referrer ? $referrer->id : null,
             'password' => Hash::make($data['password']),
         ]);
         $user->assignRole('user');
         return $user;
 
     }
+
+    /**
+     * Если пользователь был зарегистрирован, то отправляем уведомление
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+//    protected function registered(Request $request, $user)
+//    {
+//        if ($user->referrer !== null) {
+//            Notification::send($user->referrer, new referalNotification($user));
+//        }
+//
+//        return redirect($this->redirectPath());
+//    }
 }

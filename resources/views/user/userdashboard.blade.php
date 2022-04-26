@@ -21,7 +21,12 @@
                 <div class="card widget_2 traffic">
                     <div class="body">
                         <h6>Ваша реферальная ссылка</h6>
-                        <input type="text" class="form-control input-disabled" value="smartx.beget.tech/referal_reg.php?id=124" disabled="">
+                        <input type="text" class="form-control input-disabled" value="{{ Auth::user()->referral_link }}" disabled="">
+{{--                        <ul class="list-group mt-3">--}}
+{{--                            <li class="list-group-item">Логин: {{ Auth::user()->username }}</li>--}}
+{{--                            <li class="list-group-item">Реферал: {{ Auth::user()->referrer->name ?? 'Не указан' }}</li>--}}
+{{--                            <li class="list-group-item">Количество рефералов: {{ count(Auth::user()->referrals)  ?? '0' }}</li>--}}
+{{--                        </ul>--}}
                     </div>
                 </div>
             </div>
@@ -102,7 +107,7 @@
                                 <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
-                                <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3 ml-lg-5 col-sm-en-custom">Переводы</a>
+                                <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3 ml-lg-5">Переводы</a>
                             </div>
                         </div>
                     </div>
@@ -110,21 +115,4 @@
             </div>
         </div>
     </div>
-{{--    <style>--}}
-{{--        .slimScrollDiv{--}}
-{{--            max-height:240px!important;--}}
-{{--        }--}}
-{{--    </style>--}}
-
-    <style>
-        @media (min-width: 768px) {
-            .col-sm-en-custom{
-                margin-right: 15px!important;
-            }
-
-
-        }
-
-
-    </style>
 @endsection
