@@ -87,15 +87,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-//        dd($data);
         $referrer = User::whereUsername(session()->pull('referrer'))->first();
         $user = User::create([
             'name' => $data['name'],
+            'lastname' => $data['lastname'],
+            'phone' => $data['phone'],
+//            'balance' => $data['balance'],
             'username' => $data['name'],
             'email' => $data['email'],
             'referrer_id' => $referrer ? $referrer->id : null,
             'password' => Hash::make($data['password']),
         ]);
+
         $user->assignRole('user');
         return $user;
 

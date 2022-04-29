@@ -20,8 +20,11 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('referrer_id')->nullable();
             $table->foreign('referrer_id')->references('id')->on('users');
             $table->string('username')->unique();
-//            $table->string('lastname')->nullable();
-//            $table->string('phone')->nullable();
+            $table->string('lastname')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('balance')->nullable();
+            $table->boolean('ban')->default(true);
+
 //            $table->string('promocode')->nullable();
 //            $table->string('login')->unique()->nullable();
 

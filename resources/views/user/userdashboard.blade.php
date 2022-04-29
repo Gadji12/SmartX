@@ -34,12 +34,15 @@
                 <div class="card widget_2 traffic">
                     <div class="body">
                         <div class="row">
-                            <div class="col-lg-8 col-md-6 col-sm-6">
+                            <div class="col-xxl-8 col-xl-7 col-lg-6 col-md-4 col-sm-6">
                                 <h6>Финансовый счёт</h6>
                                 <small class="mt-1">Общая сумма на Вашем счете</small>
-                                <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
+{{--                                @dd(Auth::user()->balance)--}}
+{{--                                <h2><span style="color:blue;">{{ DB::table('users')->where('balance')->get()}}<span style="font-size:18px;">₽</span></span></h2>--}}
+                                <h2><span style="color:blue;">{{Auth::user()->balance}} <span style="font-size:18px;"> ₽</span></span></h2>
+
                             </div>
-                            <div class="col-lg-4 col-md-3 col-sm-12">
+                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12">
                                 <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-2 ml-xl-5">Пополнить баланс</a>
                             </div>
                         </div>
@@ -50,12 +53,12 @@
                 <div class="card widget_2 sales">
                     <div class="body">
                         <div class="row">
-                            <div class="col-lg-7 col-md-6 col-sm-12">
+                            <div class="col-xxl-8 col-xl-7 col-lg-6 col-md-4 col-sm-6">
                                 <h6>Активные инвестиции</h6>
                                 <small>Актуальная сумма, которая инвестирована в проекты</small>
                                 <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                             </div>
-                            <div class="col-lg-5 col-md-6 col-sm-12 flex-lg-nowrap">
+                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12">
                                 <a href="{{route('offers.index')}}" class="btn btn-primary mt-2 mb-2 ">Инвестировать</a>
                                 <a href="{{route('user-project')}}" class="btn btn-primary mt-2 mb-2">Мои проекты</a>
                             </div>
@@ -85,12 +88,12 @@
                 <div class="card widget_2 sales">
                     <div class="body">
                         <div class="row">
-                            <div class="col-lg-9 col-md-6 col-sm-12">
+                            <div class="col-xxl-8 col-xl-7 col-lg-6 col-md-4 col-sm-6">
                                 <h6>Всего выведено</h6>
                                 <small class="mt-1">Общая сумма выведенных Вами средств</small>
                                 <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12 text-center">
                                 <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3">Вывести деньги</a>
                             </div>
                         </div>
@@ -101,12 +104,12 @@
                 <div class="card widget_2 sales">
                     <div class="body">
                         <div class="row">
-                            <div class="col-lg-9 col-md-6 col-sm-12">
+                            <div class="col-xxl-8 col-xl-7 col-lg-6 col-md-4 col-sm-6">
                                 <h6>Общая прибыль</h6>
                                 <small class="mt-1">Доход в совокупности, полученный от инвестиций и с партнёрской программы за весь период</small>
                                 <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12 text-center">
                                 <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3 ml-lg-5">Переводы</a>
                             </div>
                         </div>

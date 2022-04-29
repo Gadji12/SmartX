@@ -23,10 +23,10 @@ class User extends Authenticatable
         'name',
         'username',
         'referrer_id',
-
-//        'lastname',
+        'balance',
+        'lastname',
 //        'login',
-//        'phone',
+        'phone',
 //        'promocode',
 
         'email',

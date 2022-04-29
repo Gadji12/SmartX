@@ -60,16 +60,16 @@
 {{--                                 </span>--}}
 {{--                                 @enderror--}}
 {{--                             </div>--}}
-                             {{--        <div class="form__group" style="margin-top: 15px;">--}}
-                             {{--            <label for="lastname">Фамилия</label>--}}
-                             {{--            <input type="text" id="lastname" name="lastname" value="{{old('lastname')}}" class="@error('lastname') is-invalid @enderror">--}}
+                                     <div class="form__group" style="margin-top: 15px;">
+                                         <label for="lastname">Фамилия</label>
+                                         <input type="text" id="lastname" name="lastname" value="{{old('lastname')}}" class="@error('lastname') is-invalid @enderror">
 
-                             {{--            @error('lastname')--}}
-                             {{--            <span class="invalid-feedback" role="alert">--}}
-                             {{--                <p>{{ $message }}</p>--}}
-                             {{--            </span>--}}
-                             {{--            @enderror--}}
-                             {{--        </div>--}}
+                                         @error('lastname')
+                                         <span class="invalid-feedback" role="alert">
+                                             <p>{{ $message }}</p>
+                                         </span>
+                                         @enderror
+                                     </div>
 
                              {{--        <div class="form__group" style="margin-top: 15px;">--}}
                              {{--            <label for="login">Логин</label>--}}
@@ -82,16 +82,16 @@
                              {{--            @enderror--}}
                              {{--        </div>--}}
 
-                             {{--        <div class="form__group">--}}
-                             {{--            <label for="phone">Номер телефона</label>--}}
-                             {{--            <input type="tel" id="phone" name="phone" placeholder="+7(900)000-00-00" value="{{old('phone')}}" class="@error('phone') is-invalid @enderror">--}}
+                                     <div class="form__group">
+                                         <label for="phone">Номер телефона</label>
+                                         <input type="tel" id="phone" name="phone" placeholder="+7(900)000-00-00" value="{{old('phone')}}" class="@error('phone') is-invalid @enderror">
 
-                             {{--            @error('phone')--}}
-                             {{--            <span class="invalid-feedback" role="alert">--}}
-                             {{--                <p>{{ $message }}</p>--}}
-                             {{--            </span>--}}
-                             {{--            @enderror--}}
-                             {{--        </div>--}}
+                                         @error('phone')
+                                         <span class="invalid-feedback" role="alert">
+                                             <p>{{ $message }}</p>
+                                         </span>
+                                         @enderror
+                                     </div>
 
                              {{--        <div class="form__group">--}}
                              {{--            <label for="promocode">Промокод (если есть)</label>--}}

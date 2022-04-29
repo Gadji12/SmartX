@@ -326,11 +326,12 @@
             <li><a href="{{route('admin-userlist')}}" class=" waves-effect waves-block"><i class="zmdi zmdi-account"></i><span>Пользователи</span></a></li>
 
 
-            <form action="{{route('logout')}}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-danger ml-3"><i class="zmdi zmdi-power"></i><span> Выход</span></button>
-            </form>
-
+            <a>
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger ml-3"><i class="zmdi zmdi-power"></i><span> Выход</span></button>
+                </form>
+            </a>
 
             <li>
                 <div class="progress-container progress-primary m-t-10">

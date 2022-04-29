@@ -23,7 +23,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="card">
                             <div class="body product_item">
-                                <img src="{{asset('/storage/'.$offer->picture_offer)}}" alt="Product" class="img-fluid cp_img">
+                                <img src="{{asset('/storage/'.$offer->picture_offer)}}" width="300" alt="Product" class="img-fluid cp_img">
                                 <div class="product_details">
                                     <a href="ec-product-detail.html">{{$offer->offer_name}}</a>
                                     <ul class="product_price list-unstyled">

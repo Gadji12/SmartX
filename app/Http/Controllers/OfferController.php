@@ -67,7 +67,6 @@ class OfferController extends Controller
      */
     public function show(Offer $project)
     {
-//        dd($offer);
         return view('admin.offer.show', compact('project'));
     }
 

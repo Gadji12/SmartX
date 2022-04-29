@@ -34,28 +34,16 @@ class UserProductController extends Controller
     }
 
     /**
+     * @param  int  $id
+     * @param  \App\Models\Offer  $offer
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request, Offer $offer): RedirectResponse
     {
-        $product = new UserProduct();
-        $product -> user_offer_name = $request->input('user_offer_name');
-        $product -> user_desc_offer = $request->input('user_desc_offer');
-        $product -> user_price_per_offer = $request->input('user_price_per_offer');
-        $product -> user_number_shares_offer = $request->input('user_number_shares_offer');
-        $product -> user_end_date_offer = $request->input('user_end_date_offer');
 
-        if ($request->hasFile('user_picture_offer')){
-            $product -> user_picture_offer = $request ->file('user_picture_offer')->store('user_picture_offer','public');
-
-
-//            \Intervention\Image\Facades\Image::make('picture_offer')->resize(300,300)->save(public_path('picture_offer/'));
-        }
-        $product->save();
-        return redirect()->route('products.index')->with('alert','Оффер успешно создан');
     }
 
     /**
@@ -76,9 +64,10 @@ class UserProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request,$id)
     {
-        //
+        //       if ($request->user()->balance <)
+        dd($request->get($id));
     }
 
     /**
@@ -93,6 +82,7 @@ class UserProductController extends Controller
         //
     }
 
+
     /**
      * Remove the specified resource from storage.
      *
@@ -103,4 +93,5 @@ class UserProductController extends Controller
     {
         //
     }
+
 }

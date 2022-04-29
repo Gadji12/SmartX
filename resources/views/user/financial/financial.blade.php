@@ -45,12 +45,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <small>Баланс</small>
-                                <h5>0₽</h5>
+                                <h5>{{Auth::user()->balance}}₽</h5>
                             </div>
                         </div><br>
                         <div class="row mb-2">
                             <div class="col-12 text-center">
-                                <button class="btn btn-warning" style="color:#fff;width:45%;min-width: 150px;" id="withbtn">Пополнить счёт</button>
+                                <a href="{{route('user-up-balance')}}" class="btn btn-warning" style="color:#fff;width:45%;min-width: 150px;" id="withbtn">Пополнить счёт</a>
                             </div>
                         </div>
                     </div>
@@ -108,13 +108,14 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>...₽</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                    <td>...</td>
-                                </tr>
+                                @foreach($transactions as $transaction)
+                                    <tr>
+                                        <td>{{$transaction ->amount}} Р</td>
+                                        <td>{{$transaction ->type}}</td>
+                                        <td>{{$transaction ->requisites}}</td>
+                                        <td>{{$transaction ->created_at}}</td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

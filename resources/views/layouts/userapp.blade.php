@@ -103,7 +103,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{route('user-referals')}}">
+                            <a href="{{route('user-referrals')}}">
                                 <div class="icon-circle mb-2 bg-green"><i class="zmdi zmdi-accounts"></i></div>
                                 <p class="mb-0">Рефералы</p>
                             </a>
@@ -206,7 +206,7 @@
                 </ul>
             </li>
             <li><a href="{{route('user-portfolio')}}"><i class="zmdi zmdi-file"></i><span>Мои инвестиции</span></a></li>
-            <li><a href="{{route('user-referals')}}"><i class="zmdi zmdi-accounts"></i><span>Рефералы</span></a></li>
+            <li><a href="{{route('user-referrals')}}"><i class="zmdi zmdi-accounts"></i><span>Рефералы</span></a></li>
             <li><a href="{{route('user-financial')}}"><i class="zmdi zmdi-balance-wallet"></i><span>Финансы</span></a></li>
             <li><a href="{{route('user-affiliate')}}"><i class="zmdi zmdi-hc-fw"></i><span>Партнерская программа</span></a></li>
             <hr>

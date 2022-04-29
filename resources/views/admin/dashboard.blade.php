@@ -22,7 +22,7 @@
                     <div class="card widget_2 big_icon traffic">
                         <div class="body">
                             <h6>Всего пользователей (админы не учитываются)</h6>
-                            <h2>12</h2>
+                            <h2>{{DB::table('users')->count()}}</h2>
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="card widget_2 big_icon sales">
                         <div class="body">
                             <h6>Всего админов</h6>
-                            <h2>1</h2>
+                            <h2>{{DB::table('model_has_roles')->where('role_id', 2)->count()}}</h2>
                         </div>
                     </div>
                 </div>

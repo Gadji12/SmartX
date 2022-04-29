@@ -289,7 +289,47 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-success btn-block my-btn my-2 my-sm-0 btn-lg" type="submit" name="invest">ИНВЕСТИРОВАТЬ</button>
+                <button class="btn btn-success btn-block my-btn my-2 my-sm-0 btn-lg" data-toggle="modal" data-target="#invest"  type="submit" name="invest">ИНВЕСТИРОВАТЬ</button>
+
+                <div class="modal fade " id="invest" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="title" id="smallModalLabel">Купить доли у инвестора</h4>
+                            </div>
+                            <div class="modal-body">Проект - {{$offer->offer_name}} </div>
+                            <div class="modal-body">Продавец - {{$offer->name}} </div>
+                            <div class="modal-body">Количество выставленных на продажу долей - {{$offer->number_shares_offer}} </div>
+                            <div class="modal-body">Стоимость за Royal - {{$offer->number_shares_offer}} </div>
+                            <div class="modal-body">Общая цена лота - {{$offer->number_shares_offer}} </div>
+                            <div class="modal-body">Дата и время старта - {{$offer->number_shares_offer}} </div>
+                            <div class="modal-body">Текущий статус - <a  class="btn  btn-success text-white"  data-color-name="alert-success"> Активно </a></div>
+{{--                            <form action="{{route('offers.edit',$offer)}} " method="POST">--}}
+                                @csrf
+                                <button type="submit" class="btn btn-danger ml-4 waves-effect">Добавить заявку</button>
+{{--                            </form>--}}
+                            <div class="modal-footer">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Дата и время</th>
+                                            <th>Цена за лот</th>
+                                            <th>Пользователь</th>
+                                            <th>Примечание</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

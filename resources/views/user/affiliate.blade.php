@@ -134,10 +134,12 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
+                                                    @foreach($referrals as $referral)
                                                     <tr>
 {{--                                                        <th scope="row">1</th>--}}
-                                                        <td class="text-center">Mark</td>
+                                                        <td class="text-center">{{$referral->name}} - {{$referral->lastname}}</td>
                                                     </tr>
+                                                    @endforeach
                                                     </tbody>
                                                 </table>
                                             </div>

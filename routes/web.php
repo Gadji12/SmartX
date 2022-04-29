@@ -68,17 +68,17 @@ Route::prefix('user')->middleware('auth')->group(function (){
             return view('user.portfolio');
         })->name('user-portfolio');
 
-        Route::get('/referals',function (){
-            return view('user.referals');
-        })->name('user-referals');
+        Route::get('/referrals',    [\App\Http\Controllers\ReferralController::class, 'showReferral'])->name('user-referrals');
 
-        Route::get('/financial',function (){
-            return view('user.financial.financial');
-        })->name('user-financial');
+        Route::get('/financial',    [\App\Http\Controllers\TransactionController::class, 'indexTransactions'])->name('user-financial');
 
-        Route::get('/affiliate',function (){
-            return view('user.affiliate');
-        })->name('user-affiliate');
+        Route::get('/affiliate',   [\App\Http\Controllers\ReferralController::class, 'showAffiliate'])->name('user-affiliate');
+
+        Route::post('/financial/balance',   [\App\Http\Controllers\TransactionController::class,'storeTransactions'])->name('postbalance');
+
+        Route::get('/financial/balance',function (){
+            return view('user.financial.upbalance');
+        })->name('user-up-balance');
 
         Route::get('/financial/withdrawal',function (){
             return view('user.financial.withdrawal');
@@ -94,7 +94,10 @@ Route::prefix('user')->middleware('auth')->group(function (){
 
         Route::resources([
             'offers' =>\App\Http\Controllers\UserProductController::class
+
         ]);
 
+//        Route::post('/addproject',[\App\Http\Controllers\UserProjectController::class, 'addProject'])->name('addproject');
     });
+
 });
