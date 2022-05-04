@@ -43,7 +43,7 @@
 
                             </div>
                             <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12">
-                                <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-2 ml-xl-5">Пополнить баланс</a>
+                                <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-2 ml-xl-5 align-self-end">Пополнить баланс</a>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                                 <small>Актуальная сумма, которая инвестирована в проекты</small>
                                 <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                             </div>
-                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12">
+                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12 align-self-end">
                                 <a href="{{route('offers.index')}}" class="btn btn-primary mt-2 mb-2 ">Инвестировать</a>
                                 <a href="{{route('user-project')}}" class="btn btn-primary mt-2 mb-2">Мои проекты</a>
                             </div>
@@ -93,7 +93,7 @@
                                 <small class="mt-1">Общая сумма выведенных Вами средств</small>
                                 <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                             </div>
-                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12 text-center">
+                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12 text-center align-self-end">
                                 <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3">Вывести деньги</a>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                                 <small class="mt-1">Доход в совокупности, полученный от инвестиций и с партнёрской программы за весь период</small>
                                 <h2><span style="color:red;">0<span style="font-size:18px;">₽</span></span></h2>
                             </div>
-                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12 text-center">
+                            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8 col-sm-12 text-center align-self-end">
                                 <a href="{{route('user-financial')}}" class="btn btn-primary mt-2 mb-3 ml-lg-5">Переводы</a>
                             </div>
                         </div>
